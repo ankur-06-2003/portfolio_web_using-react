@@ -16,15 +16,12 @@ app.use(express.static('public'))
 // })
 
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://ankur-wyd6.onrender.com',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
     Credentials: true,
   }
 app.use(cors(corsOptions));
-app.get('/', (req, res) => {
-    res.send("hello")
-})
 
 app.post('/', (req, res) => {
     const data = req.body
@@ -58,5 +55,5 @@ app.post('/', (req, res) => {
 })
 
 app.listen(8000, () => {
-    console.log("listening on port http://localhost:8000")
+    console.log("listening on port")
 })
