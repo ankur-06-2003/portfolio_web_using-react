@@ -17,7 +17,7 @@ export default function Contact() {
             return
         }
         setloading(true)
-        const response = await fetch("http://localhost:8000", {
+        const response = await fetch("https://ankuryadav-backend.onrender.com", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
